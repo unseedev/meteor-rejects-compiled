@@ -9,7 +9,7 @@ concurrency:
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, 1.21.6 ]
     paths-ignore:
       - '*.md'
 
@@ -34,9 +34,9 @@ jobs:
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest-1.21.4"
+          automatic_release_tag: "latest-1.21.6"
           prerelease: false
-          title: "1.21.4 Build"
+          title: "1.21.6 Build"
           files: |
             ./build/libs/*.jar
 
